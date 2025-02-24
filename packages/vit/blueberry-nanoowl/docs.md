@@ -1,11 +1,11 @@
 
-* NanoOWL from https://github.com/NVIDIA-AI-IOT/nanoowl/
+* Blueberry-nanoowl from https://github.com/sunflowertele2/blueberry-nanoowl/
 
 ### Run the basic usage example and copy the result to host
 
 ```
-blueberry-jetson-containers run --workdir /opt/nanoowl/examples \
-  $(autotag nanoowl) \
+blueberry-jetson-containers run --workdir /opt/blueberry-nanoowl/examples \
+  $(autotag blueberry-nanoowl) \
     python3 owl_predict.py \
       --prompt="[an owl, a glove]" \
       --threshold=0.1 \
@@ -19,8 +19,8 @@ blueberry-jetson-containers run --workdir /opt/nanoowl/examples \
 2. Launch the demo
 
 ```
-blueberry-jetson-containers run --workdir /opt/nanoowl/examples/tree_demo \
-  $(autotag nanoowl) \
+blueberry-jetson-containers run --workdir /opt/blueberry-nanoowl/examples/tree_demo \
+  $(autotag blueberry-nanoowl) \
     python3 tree_demo.py ../../data/owl_image_encoder_patch32.engine
 ```
 
