@@ -1,22 +1,22 @@
 
 * Ollama from https://github.com/ollama/ollama with CUDA enabled (found under `/bin/ollama`)
-* Thanks to [`@remy415`](https://github.com/remy415) for getting Ollama working on Jetson and contributing the Dockerfile ([PR #465](https://github.com/dusty-nv/jetson-containers/pull/465))
+* Thanks to [`@remy415`](https://github.com/remy415) for getting Ollama working on Jetson and contributing the Dockerfile ([PR #465](https://github.com/dusty-nv/blueberry-jetson-containers/pull/465))
 
 ## Ollama Server
 
 First, start the local Ollama server as a daemon in the background, either of these ways:
 
 ```
-# models cached under jetson-containers/data
-jetson-containers run --name ollama $(autotag ollama)
+# models cached under blueberry-jetson-containers/data
+blueberry-jetson-containers run --name ollama $(autotag ollama)
 
 # models cached under your user's home directory
 docker run --runtime nvidia -it --rm --network=host -v ~/ollama:/ollama -e OLLAMA_MODELS=/ollama dustynv/ollama:r36.4.0
 ```
 
-You can then run the ollama [client](#ollama-client) in the same container (or a different one if desired).  The default docker run CMD of the `ollama` container is [`/start_ollama`](./start_ollama), which starts the ollama server in the background and returns control to the user. The ollama server logs are saved under your mounted `jetson-containers/data/logs` directory for monitoring them outside the containers.
+You can then run the ollama [client](#ollama-client) in the same container (or a different one if desired).  The default docker run CMD of the `ollama` container is [`/start_ollama`](./start_ollama), which starts the ollama server in the background and returns control to the user. The ollama server logs are saved under your mounted `blueberry-jetson-containers/data/logs` directory for monitoring them outside the containers.
 
-Setting the `$OLLAMA_MODELS` environment variable as shown above will change where ollama downloads the models to.  By default, this is under your `jetson-containers/data/models/ollama` directory which is automatically mounted by `jetson-containers run`.  
+Setting the `$OLLAMA_MODELS` environment variable as shown above will change where ollama downloads the models to.  By default, this is under your `blueberry-jetson-containers/data/models/ollama` directory which is automatically mounted by `blueberry-jetson-containers run`.  
 
 ## Ollama Client
 
@@ -27,10 +27,10 @@ Start the Ollama CLI front-end with your desired [model](https://ollama.com/libr
 /bin/ollama run mistral
 
 # if launching a new container for the client in another terminal
-jetson-containers run $(autotag ollama) /bin/ollama run mistral
+blueberry-jetson-containers run $(autotag ollama) /bin/ollama run mistral
 ```
 
-<img src="https://github.com/dusty-nv/jetson-containers/blob/docs/docs/images/ollama_cli.gif?raw=true" width="750px"></img>
+<img src="https://github.com/dusty-nv/blueberry-jetson-containers/blob/docs/docs/images/ollama_cli.gif?raw=true" width="750px"></img>
 
 Or you can run the client outside container by installing Ollama's binaries for arm64 (without CUDA, which only the server needs)
 
@@ -53,7 +53,7 @@ docker run -it --rm --network=host --add-host=host.docker.internal:host-gateway 
 
 You can then navigate your browser to `http://JETSON_IP:8080`, and create a fake account to login (these credentials are only stored locally)
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/ollama_open_webui.jpg" width="800px"></img>
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/ollama_open_webui.jpg" width="800px"></img>
 
 ## Memory Usage
 

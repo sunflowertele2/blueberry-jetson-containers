@@ -6,7 +6,7 @@
 * LLaVa vision LLM from https://github.com/haotian-liu/LLaVA 
 * See [jetson-ai-lab.com/tutorial_llava.html](https://www.jetson-ai-lab.com/tutorial_llava.html) to use quantized with text-generation-webui
 
-<img src="https://github.com/dusty-nv/jetson-containers/raw/master/data/images/hoover.jpg" width="400">
+<img src="https://github.com/dusty-nv/blueberry-jetson-containers/raw/master/data/images/hoover.jpg" width="400">
 
 These are with `llava-llama-2` models, however `llava-1.5` is now the latest and can be use instead.
 
@@ -59,7 +59,7 @@ ASSISTANT: The environment is a desert setting, with a mountain in the backgroun
 
 | **`llava`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`llava_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/llava_jp60.yml?label=llava:jp60)](https://github.com/dusty-nv/jetson-containers/actions/workflows/llava_jp60.yml) [![`llava_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/llava_jp51.yml?label=llava:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/llava_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`llava_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/llava_jp60.yml?label=llava:jp60)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/llava_jp60.yml) [![`llava_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/llava_jp51.yml?label=llava:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/llava_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=34.1.0']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda`](/packages/cuda/cuda) [`cudnn`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`numpy`](/packages/numpy) [`cmake`](/packages/build/cmake/cmake_pip) [`onnx`](/packages/onnx) [`pytorch:2.2`](/packages/pytorch) [`torchvision`](/packages/pytorch/torchvision) [`huggingface_hub`](/packages/llm/huggingface_hub) [`rust`](/packages/build/rust) [`transformers`](/packages/llm/transformers) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile`](Dockerfile) |
@@ -87,27 +87,27 @@ ASSISTANT: The environment is a desert setting, with a mountain in the backgroun
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag llava)
+blueberry-jetson-containers run $(autotag llava)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/llava:r36.2.0
+blueberry-jetson-containers run dustynv/llava:r36.2.0
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/llava:r36.2.0
 ```
-> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
+> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
 > <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag llava)
+blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag llava)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag llava) my_app --abc xyz
+blueberry-jetson-containers run $(autotag llava) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
@@ -117,7 +117,7 @@ You can pass any options to it that you would to [`docker run`](https://docs.doc
 
 If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:
 ```bash
-jetson-containers build llava
+blueberry-jetson-containers build llava
 ```
-The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.
+The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.
 </details>

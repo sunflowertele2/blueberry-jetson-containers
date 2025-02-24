@@ -9,7 +9,7 @@ To quantize and benchmark a model, run the [`benchmark.sh`](benchmark.sh) script
 HUGGINGFACE_TOKEN=hf_abc123def ./benchmark.sh meta-llama/Llama-2-7b-hf
 ```
 
-This will run the quantization and benchmarking in the MLC container, and save the performance data to `jetson-containers/data/benchmarks/mlc.csv`.  If you are accessing a gated model, substitute your HuggingFace account's API key above.  Omitting the model will benchmark a default set of Llama models.  See [`benchmark.sh`](benchmark.sh) for various environment variables you can set.
+This will run the quantization and benchmarking in the MLC container, and save the performance data to `blueberry-jetson-containers/data/benchmarks/mlc.csv`.  If you are accessing a gated model, substitute your HuggingFace account's API key above.  Omitting the model will benchmark a default set of Llama models.  See [`benchmark.sh`](benchmark.sh) for various environment variables you can set.
 
 ```
 AVERAGE OVER 3 RUNS, input=16, output=128

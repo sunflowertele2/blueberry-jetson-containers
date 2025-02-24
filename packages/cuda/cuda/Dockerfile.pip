@@ -1,6 +1,6 @@
 #
 # pip_cache enables Jetson pip server index of precompiled wheels for versions of JetPack and CUDA.
-# See here:  https://github.com/dusty-nv/jetson-containers/blob/master/docs/build.md#pip-server
+# See here:  https://github.com/dusty-nv/blueberry-jetson-containers/blob/master/docs/build.md#pip-server
 #
 # This is done by setting environment variables like PIP_INDEX_URL to jetson.webdirect.org/jp6/cu122
 # (which get populated by config.py from the CUDA container, which defines the versions of CUDA)

@@ -33,6 +33,6 @@ def set_log_dir(path, type='root', create=True):
         set_log_dir(os.path.join(path, 'run'), 'run', create)
         
         
-# default log dir is:  jetson-containers/logs
+# default log dir is:  blueberry-jetson-containers/logs
 set_log_dir(os.path.join(_PACKAGE_ROOT, 'logs', datetime.datetime.now().strftime('%Y%m%d_%H%M%S')))
 

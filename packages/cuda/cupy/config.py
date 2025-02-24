@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
+from blueberry_jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
 
 # latest cupy versions to support Python 3.8 (for JetPack 5)
 # and Python 3.6 (for JetPack 4), respectively

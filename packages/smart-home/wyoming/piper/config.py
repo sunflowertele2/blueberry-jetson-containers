@@ -1,4 +1,4 @@
-from jetson_containers import handle_text_request
+from blueberry_jetson_containers import handle_text_request
 
 from packaging.version import Version
 

@@ -16,7 +16,7 @@ except Exception as ex:
     raise ex
 
 # download test image    
-img_url = 'https://raw.githubusercontent.com/dusty-nv/jetson-containers/59f840abbb99f22914a7b2471da829b3dd56122e/test/data/test_0.jpg'
+img_url = 'https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/59f840abbb99f22914a7b2471da829b3dd56122e/test/data/test_0.jpg'
 img_path = '/tmp/test_0.jpg'
 
 request = requests.get(img_url, allow_redirects=True)

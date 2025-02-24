@@ -1,5 +1,5 @@
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/diffusion_webui.jpg">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/diffusion_webui.jpg">
 
 * stable-diffusion-webui from https://github.com/AUTOMATIC1111/stable-diffusion-webui (found under `/opt/stable-diffusion-webui`)
 * with TensorRT extension from https://github.com/AUTOMATIC1111/stable-diffusion-webui-tensorrt 

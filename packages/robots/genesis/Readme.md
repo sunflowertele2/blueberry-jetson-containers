@@ -31,13 +31,13 @@ docs.md
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag genesis-world)
+blueberry-jetson-containers run $(autotag genesis-world)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/genesis-world:r36.4.0
+blueberry-jetson-containers run dustynv/genesis-world:r36.4.0
 
 # or if using 'docker run' (specify image and mounts/etc)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/genesis-world:r36.4.0

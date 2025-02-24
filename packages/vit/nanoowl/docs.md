@@ -4,7 +4,7 @@
 ### Run the basic usage example and copy the result to host
 
 ```
-jetson-containers run --workdir /opt/nanoowl/examples \
+blueberry-jetson-containers run --workdir /opt/nanoowl/examples \
   $(autotag nanoowl) \
     python3 owl_predict.py \
       --prompt="[an owl, a glove]" \
@@ -19,7 +19,7 @@ jetson-containers run --workdir /opt/nanoowl/examples \
 2. Launch the demo
 
 ```
-jetson-containers run --workdir /opt/nanoowl/examples/tree_demo \
+blueberry-jetson-containers run --workdir /opt/nanoowl/examples/tree_demo \
   $(autotag nanoowl) \
     python3 tree_demo.py ../../data/owl_image_encoder_patch32.engine
 ```

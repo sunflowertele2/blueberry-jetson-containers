@@ -17,7 +17,7 @@ rerun
 Then, start the docker container to run the visualization script.
 
 ```bash
-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
+blueberry-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
   python3 lerobot/scripts/visualize_dataset.py \
     --repo-id lerobot/pusht \
     --episode-index 0
@@ -28,7 +28,7 @@ jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
 See the [original instruction on lerobot repo](https://github.com/huggingface/lerobot/?tab=readme-ov-file#evaluate-a-pretrained-policy).
 
 ```bash
-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
+blueberry-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
   python3 lerobot/scripts/eval.py \
     -p lerobot/diffusion_pusht \
     eval.n_episodes=10 \
@@ -40,7 +40,7 @@ jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
 See the [original instruction on lerobot repo](https://github.com/huggingface/lerobot/?tab=readme-ov-file#train-your-own-policy).
 
 ```bash
-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
+blueberry-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
   python3 lerobot/scripts/train.py \
     policy=act \
     env=aloha \
@@ -115,10 +115,10 @@ lrwxrwxrwx 1 root root         7 Sep 24 17:20 /dev/ttyACM_kochfollower -> ttyACM
 lrwxrwxrwx 1 root root         7 Sep 24 16:13 /dev/ttyACM_kochleader -> ttyACM1
 ```
 
-### Create the local copy of lerobot on host (under `jetson-containers/data` dir)
+### Create the local copy of lerobot on host (under `blueberry-jetson-containers/data` dir)
 
 ```bash
-cd jetson-containers
+cd blueberry-jetson-containers
 ./packages/robots/lerobot/clone_lerobot_dir_under_data.sh
 ./packages/robots/lerobot/copy_overlay_files_in_data_lerobot.sh
 ```

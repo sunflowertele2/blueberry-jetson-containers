@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 
 # https://github.com/protocolbuffers/protobuf/releases/tag/v3.20.3
 # (final release before protobuf4 and 21.7/21.8/ect versioning)

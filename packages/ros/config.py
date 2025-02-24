@@ -1,6 +1,6 @@
 import copy
 
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 from .version import ROS_DISTROS, ROS2_DISTROS, ROS_PACKAGES
 
 # add permutations of ROS distros/packages as subpackages

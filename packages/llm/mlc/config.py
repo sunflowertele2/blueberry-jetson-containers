@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 
 def mlc(commit, patch=None, version='0.1', tvm='0.15', llvm=17, requires=None, default=False):
     pkg = package.copy()

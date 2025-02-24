@@ -97,7 +97,7 @@ You can define multiple packages/containers per config file, like how [`l4t-tens
 Python configuration scripts (normally called `config.py`) are the most expressive and get executed at the start of a build, and can dynamically set build parameters based on your environment and version of JetPack/L4T.  They have a global `package` dict added to their scope by the build system, which is used to configure the package:
 
 ```python
-from jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
+from blueberry_jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
 
 if L4T_VERSION.major >= 36: 
     MY_PACKAGE_VERSION = 'v6.0'  # on JetPack 6
@@ -115,7 +115,7 @@ package['build_args'] = {
 This example sets build args in a Dockerfile, based on the version of JetPack/L4T that's running and the GPU architectures to compile for.  Typically the package's static settings remain in the Dockerfile header for the best visibility, while `config.py` sets the dynamic ones.
 
 
-The [`jetson_containers`](/jetson_containers) module exposes these [system variables](/jetson_containers/l4t_version.py) that you can import and parameterize Dockerfiles off of:
+The [`blueberry_jetson_containers`](/blueberry_jetson_containers) module exposes these [system variables](/blueberry_jetson_containers/l4t_version.py) that you can import and parameterize Dockerfiles off of:
 
 | Name                 |                                       Type                                      | Description                                                  |
 |----------------------|:-------------------------------------------------------------------------------:|--------------------------------------------------------------|

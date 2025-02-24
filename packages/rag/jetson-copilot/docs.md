@@ -4,7 +4,7 @@
 ## Starting `jetson-copilot` container
 
 ```bash
-jetson-containers run $(autotag jetson-copilot)
+blueberry-jetson-containers run $(autotag jetson-copilot)
 ```
 
 This will start the `ollama` server and enter into a `bash` terminal.
@@ -14,7 +14,7 @@ This will start the `ollama` server and enter into a `bash` terminal.
 First, create a directory on the host side to store Jetson related documents. The `data` directory is mounted on the container.
 
 ```
-cd jetson-containers
+cd blueberry-jetson-containers
 mkdir -p ./data/documents/jetson
 ```
 
@@ -27,7 +27,7 @@ streamlit run /opt/jetson-copilot/app.py
 
 > Or you can start the container with additional arguments:
 > ```
-> jetson-containers run $(autotag jetson-copilot) bash -c '/start_ollama && streamlit run app.py'
+> blueberry-jetson-containers run $(autotag jetson-copilot) bash -c '/start_ollama && streamlit run app.py'
 > ```
 
 This will start the `ollama` server and `streamlit` app for "Jetson Copilot", an AI assistant to answer any questions based on documents provided in `/data/documents/jetson` directory.

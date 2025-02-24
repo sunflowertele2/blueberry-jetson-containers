@@ -1,13 +1,13 @@
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/llamaspeak_voice_clip.gif">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/llamaspeak_voice_clip.gif">
 
 > [!NOTE]  
-> For llamaspeak version 2 with multimodal support, see the [`local_llm`](https://github.com/dusty-nv/jetson-containers/tree/master/packages/llm/local_llm) container
+> For llamaspeak version 2 with multimodal support, see the [`local_llm`](https://github.com/dusty-nv/blueberry-jetson-containers/tree/master/packages/llm/local_llm) container
 
 * Talk live with LLM's using [NVIDIA Riva](/packages/audio/riva-client) ASR and TTS!
 * Requires the [`riva-server`](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/riva/resources/riva_quickstart_arm64) and [`text-generation-webui`](/packages/llm/text-generation-webui) to be running
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/llamaspeak_block_diagram.jpg">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/llamaspeak_block_diagram.jpg">
 
 ### Start Riva
 
@@ -51,13 +51,13 @@ See here for command-line arguments:  https://github.com/oobabooga/text-generati
 Browsers require HTTPS to be used in order to access the client's microphone.  Hence, you'll need to create a self-signed SSL certificate and key:
 
 ```bash
-$ cd /path/to/your/jetson-containers/data
+$ cd /path/to/your/blueberry-jetson-containers/data
 $ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes -subj '/CN=localhost'
 ```
 
-You'll want to place these in your [`jetson-containers/data`](/data) directory, because this gets automatically mounted into the containers under `/data`, and will keep your SSL certificate persistent across container runs.  When you first navigate your browser to a page that uses these self-signed certificates, it will issue you a warning since they don't originate from a trusted authority:
+You'll want to place these in your [`blueberry-jetson-containers/data`](/data) directory, because this gets automatically mounted into the containers under `/data`, and will keep your SSL certificate persistent across container runs.  When you first navigate your browser to a page that uses these self-signed certificates, it will issue you a warning since they don't originate from a trusted authority:
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/ssl_warning.jpg" width="400">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/ssl_warning.jpg" width="400">
 
 You can choose to override this, and it won't re-appear again until you change certificates or your device's hostname/IP changes.
 

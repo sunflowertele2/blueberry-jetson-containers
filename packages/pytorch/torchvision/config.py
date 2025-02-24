@@ -1,4 +1,4 @@
-from jetson_containers import update_dependencies
+from blueberry_jetson_containers import update_dependencies
 from packaging.version import Version
 from ..pytorch.version import PYTORCH_VERSION
 

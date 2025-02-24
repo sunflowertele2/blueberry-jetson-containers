@@ -1,4 +1,4 @@
-from jetson_containers import github_latest_tag
+from blueberry_jetson_containers import github_latest_tag
 
 
 def create_package(version, default=False):

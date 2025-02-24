@@ -4,23 +4,23 @@
 
 
 * Ollama from https://github.com/ollama/ollama with CUDA enabled (found under `/bin/ollama`)
-* Thanks to [`@remy415`](https://github.com/remy415) for getting Ollama working on Jetson and contributing the Dockerfile ([PR #465](https://github.com/dusty-nv/jetson-containers/pull/465))
+* Thanks to [`@remy415`](https://github.com/remy415) for getting Ollama working on Jetson and contributing the Dockerfile ([PR #465](https://github.com/dusty-nv/blueberry-jetson-containers/pull/465))
 
 ## Ollama Server
 
 First, start the local Ollama server as a daemon in the background, either of these ways:
 
 ```
-# models cached under jetson-containers/data
-jetson-containers run --name ollama $(autotag ollama)
+# models cached under blueberry-jetson-containers/data
+blueberry-jetson-containers run --name ollama $(autotag ollama)
 
 # models cached under your user's home directory
 docker run --runtime nvidia -it --rm --network=host -v ~/ollama:/ollama -e OLLAMA_MODELS=/ollama dustynv/ollama:r36.2.0
 ```
 
-You can then run the ollama [client](#ollama-client) in the same container (or a different one if desired).  The default docker run CMD of the `ollama` container is [`/start_ollama`](./start_ollama), which starts the ollama server in the background and returns control to the user. The ollama server logs are saved under your mounted `jetson-containers/data/logs` directory for monitoring them outside the containers.
+You can then run the ollama [client](#ollama-client) in the same container (or a different one if desired).  The default docker run CMD of the `ollama` container is [`/start_ollama`](./start_ollama), which starts the ollama server in the background and returns control to the user. The ollama server logs are saved under your mounted `blueberry-jetson-containers/data/logs` directory for monitoring them outside the containers.
 
-Setting the `$OLLAMA_MODELS` environment variable as shown above will change where ollama downloads the models to.  By default, this is under your `jetson-containers/data/models/ollama` directory which is automatically mounted by `jetson-containers run`.  
+Setting the `$OLLAMA_MODELS` environment variable as shown above will change where ollama downloads the models to.  By default, this is under your `blueberry-jetson-containers/data/models/ollama` directory which is automatically mounted by `blueberry-jetson-containers run`.  
 
 ## Ollama Client
 
@@ -31,10 +31,10 @@ Start the Ollama CLI front-end with your desired [model](https://ollama.com/libr
 /bin/ollama run mistral
 
 # if launching a new container for the client in another terminal
-jetson-containers run $(autotag ollama) /bin/ollama run mistral
+blueberry-jetson-containers run $(autotag ollama) /bin/ollama run mistral
 ```
 
-<img src="https://github.com/dusty-nv/jetson-containers/blob/docs/docs/images/ollama_cli.gif?raw=true" width="750px"></img>
+<img src="https://github.com/dusty-nv/blueberry-jetson-containers/blob/docs/docs/images/ollama_cli.gif?raw=true" width="750px"></img>
 
 Or you can run the client outside container by installing Ollama's binaries for arm64 (without CUDA, which only the server needs)
 
@@ -57,7 +57,7 @@ docker run -it --rm --network=host --add-host=host.docker.internal:host-gateway 
 
 You can then navigate your browser to `http://JETSON_IP:8080`, and create a fake account to login (these credentials are only stored locally)
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/ollama_open_webui.jpg" width="800px"></img>
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/ollama_open_webui.jpg" width="800px"></img>
 
 ## Memory Usage
 
@@ -105,27 +105,27 @@ You can then navigate your browser to `http://JETSON_IP:8080`, and create a fake
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag ollama)
+blueberry-jetson-containers run $(autotag ollama)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/ollama:0.5.1-r36.4.0
+blueberry-jetson-containers run dustynv/ollama:0.5.1-r36.4.0
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/ollama:0.5.1-r36.4.0
 ```
-> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
+> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
 > <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag ollama)
+blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag ollama)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag ollama) my_app --abc xyz
+blueberry-jetson-containers run $(autotag ollama) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
@@ -135,7 +135,7 @@ You can pass any options to it that you would to [`docker run`](https://docs.doc
 
 If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:
 ```bash
-jetson-containers build ollama
+blueberry-jetson-containers build ollama
 ```
-The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.
+The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.
 </details>

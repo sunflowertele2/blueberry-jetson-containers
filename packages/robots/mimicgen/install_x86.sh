@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # this script is for installing openvla on a training server or workstation with dGPU(s)
 # https://pytorch.org/rl/stable/reference/generated/knowledge_base/MUJOCO_INSTALLATION.html
-#   git clone https://github.com/dusty-nv/jetson-containers
+#   git clone https://github.com/dusty-nv/blueberry-jetson-containers
 #   export MUJOCO_GL=osmesa
-#   bash jetson-containers/packages/sim/mimicgen/install_x86.sh
+#   bash blueberry-jetson-containers/packages/sim/mimicgen/install_x86.sh
 set -ex
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )

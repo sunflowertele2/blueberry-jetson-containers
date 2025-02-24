@@ -1,4 +1,4 @@
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 
 if L4T_VERSION.major < 36:
     # JP5 - subsequent versions of A1111 incompatible with Python 3.8

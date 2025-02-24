@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 
 if L4T_VERSION.major >= 34:  # JetPack 5
     # https://github.com/onnx/onnx/issues/5346

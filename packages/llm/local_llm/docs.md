@@ -1,6 +1,6 @@
 
 > [!NOTE]  
-> This source outgrew being hosted within jetson-containers and moved to:
+> This source outgrew being hosted within blueberry-jetson-containers and moved to:
 > * Repo - [`github.com/dusty-nv/NanoLLM`](https://github.com/dusty-nv/NanoLLM)
 > * Docs - [`dusty-nv.github.io/NanoLLM`](https://dusty-nv.github.io/NanoLLM)
 > * Jetson AI Lab - [Live Llava](https://www.jetson-ai-lab.com/tutorial_live-llava.html), [NanoVLM](https://www.jetson-ai-lab.com/tutorial_nano-vlm.html), [SLM](https://www.jetson-ai-lab.com/tutorial_slm.html)
@@ -10,7 +10,7 @@
 <details>
 <summary><b>ARCHIVED DOCUMENTATION</b></summary>
 <br/>
-<a href="https://www.youtube.com/watch?v=9ObzbbBTbcc"><img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/llamaspeak_llava_clip.gif"></a>
+<a href="https://www.youtube.com/watch?v=9ObzbbBTbcc"><img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/llamaspeak_llava_clip.gif"></a>
 
 * Optimized LLM inference engine with support for AWQ and MLC quantization, multimodal agents, and live ASR/TTS.
 * Web UI server using Flask, WebSockets, WebAudio, HTML5, Bootstrap5.
@@ -120,7 +120,7 @@ By omitting `--prompt`, you can chat interactively from the terminal.  If you en
 
 ## Voice Chat
 
-<a href="https://www.youtube.com/watch?v=wzLHAgDxMjQ"><img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/llamaspeak_70b_yt.jpg" width="800px"></a>
+<a href="https://www.youtube.com/watch?v=wzLHAgDxMjQ"><img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/llamaspeak_70b_yt.jpg" width="800px"></a>
 > [Interactive Voice Chat with Llama-2-70B on NVIDIA Jetson AGX Orin](https://www.youtube.com/watch?v=wzLHAgDxMjQ)
 
 To enable the web UI and ASR/TTS for live conversations, follow the steps below.
@@ -145,7 +145,7 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3
 
 The container's certificate is found under `/etc/ssl/private` and is automatically used, so HTTPS/SSL is enabled by default for these web UI's (you can change the PEM certificate/key used by setting the `SSL_KEY` and `SSL_CERT` environment variables).  When you first navigate your browser to a page that uses these self-signed certificates, it will issue you a warning since they don't originate from a trusted authority:
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/ssl_warning.jpg" width="400">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/ssl_warning.jpg" width="400">
 
 You can choose to override this, and it won't re-appear again until you change certificates or your device's hostname/IP changes.
 
@@ -168,7 +168,7 @@ You can then navigate your web browser to `https://HOSTNAME:8050` and unmute you
   
 ## Live Llava
 
-<a href="https://youtu.be/X-OXxPiUTuU" target="_blank"><img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/live_llava.gif"></a>
+<a href="https://youtu.be/X-OXxPiUTuU" target="_blank"><img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/live_llava.gif"></a>
 
 The [`VideoQuery`](agents/video_query.py) agent processes an incoming camera or video feed on prompts in a closed loop with Llava.  Navigate your browser to `https://<IP_ADDRESS>:8050` after launching it, proceed past the [SSL warning](#enabling-httpsssl), and see this [**demo walkthrough**](https://www.youtube.com/watch?v=dRmAGGuupuE) video on using the web UI. 
 
@@ -182,7 +182,7 @@ The [`VideoQuery`](agents/video_query.py) agent processes an incoming camera or 
     --video-output webrtc://@:8554/output
 ```
 
-<a href="https://youtu.be/dRmAGGuupuE" target="_blank"><img width="750px" src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/live_llava_espresso.jpg"></a>
+<a href="https://youtu.be/dRmAGGuupuE" target="_blank"><img width="750px" src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/live_llava_espresso.jpg"></a>
 
 This uses [`jetson_utils`](https://github.com/dusty-nv/jetson-utils) for video I/O, and for options related to protocols and file formats, see [Camera Streaming and Multimedia](https://github.com/dusty-nv/jetson-inference/blob/master/docs/aux-streaming.md).  In the example above, it captures a V4L2 USB webcam connected to the Jetson (under the device `/dev/video0`) and outputs a WebRTC stream.
 
@@ -224,7 +224,7 @@ To enable this mode, first follow the [NanoDB tutorial](https://www.jetson-ai-la
 
 You can also tag incoming images and add them to the database using the panel in the web UI:
 
-<a href="https://youtu.be/dRmAGGuupuE"><img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/live_llava_bear.jpg"></a>
+<a href="https://youtu.be/dRmAGGuupuE"><img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/live_llava_bear.jpg"></a>
 > [Live Llava 2.0 - VILA + Multimodal NanoDB on Jetson Orin](https://youtu.be/X-OXxPiUTuU) (container: [`local_llm`](/packages/llm/local_llm#live-llava)) 
 
 </details>

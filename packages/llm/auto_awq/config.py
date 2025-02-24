@@ -1,4 +1,4 @@
-from jetson_containers import update_dependencies, CUDA_ARCHITECTURES
+from blueberry_jetson_containers import update_dependencies, CUDA_ARCHITECTURES
 from packaging.version import Version
 
 def AutoAWQ(version, kernels_version, default=False):

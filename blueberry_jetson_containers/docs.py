@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 #
 # Generate one or more package's README.md:
-#   python3 -m jetson_containers.docs package pytorch tensorflow
-#   python3 -m jetson_containers.docs package *
+#   python3 -m blueberry_jetson_containers.docs package pytorch tensorflow
+#   python3 -m blueberry_jetson_containers.docs package *
 #
 # Generate the package index (packages/README.md)
-#   python3 -m jetson_containers.docs index
+#   python3 -m blueberry_jetson_containers.docs index
 #
 import os
 import re
@@ -14,12 +14,12 @@ import pprint
 import argparse
 import dockerhub_api
 
-from jetson_containers import (find_package, find_packages, group_packages, dependant_packages, package_scan_options,
+from blueberry_jetson_containers import (find_package, find_packages, group_packages, dependant_packages, package_scan_options,
                                resolve_dependencies, find_registry_containers, L4T_VERSION, JETPACK_VERSION)
 
-from jetson_containers.ci import find_package_workflows, generate_workflow_badge
+from blueberry_jetson_containers.ci import find_package_workflows, generate_workflow_badge
 
-from jetson_containers.utils import split_container_name
+from blueberry_jetson_containers.utils import split_container_name
 
 
 _TABLE_DASH="------------"
@@ -171,10 +171,10 @@ def generate_package_docs(packages, root, repo, simulate=False):
         # example commands for running the container
         run_txt = "\n<details open>\n"
         run_txt += '<summary><b><a id="run">RUN CONTAINER</a></b></summary>\n<br>\n\n'
-        run_txt += "To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:\n" 
+        run_txt += "To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:\n" 
         run_txt += "```bash\n"
         run_txt += "# automatically pull or build a compatible container image\n"
-        run_txt += f"jetson-containers run $(autotag {pkg_name})\n"
+        run_txt += f"blueberry-jetson-containers run $(autotag {pkg_name})\n"
         run_img = f"{pkg_name}:{L4T_VERSION}\n"
         
         # list all the dockerhub images for this group of packages
@@ -185,7 +185,7 @@ def generate_package_docs(packages, root, repo, simulate=False):
             
             run_txt += "\n# or explicitly specify one of the container images above\n"
             run_img = f"{registry[0]['namespace']}/{registry[0]['name']}:{registry[0]['tags'][0]['name']}"
-            run_txt += f"jetson-containers run {run_img}\n"
+            run_txt += f"blueberry-jetson-containers run {run_img}\n"
             
             txt += "\n<details open>\n"
             txt += '<summary><b><a id="images">CONTAINER IMAGES</a></b></summary>\n<br>\n\n'
@@ -208,16 +208,16 @@ def generate_package_docs(packages, root, repo, simulate=False):
         run_txt += "\n# or if using 'docker run' (specify image and mounts/ect)\n"
         run_txt += f"sudo docker run --runtime nvidia -it --rm --network=host {run_img}\n"
         run_txt += "```\n"
-        run_txt += "> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>\n" 
+        run_txt += "> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>\n" 
         run_txt += "> <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>\n\n"
         
         run_txt += f"To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:\n"
         run_txt += "```bash\n"
-        run_txt += f"jetson-containers run -v /path/on/host:/path/in/container $(autotag {pkg_name})\n"
+        run_txt += f"blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag {pkg_name})\n"
         run_txt += "```\n"
         run_txt += f"To launch the container running a command, as opposed to an interactive shell:\n"
         run_txt += "```bash\n"
-        run_txt += f"jetson-containers run $(autotag {pkg_name}) my_app --abc xyz\n"
+        run_txt += f"blueberry-jetson-containers run $(autotag {pkg_name}) my_app --abc xyz\n"
         run_txt += "```\n"
         run_txt += "You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.\n"
         run_txt += "</details>\n"
@@ -226,9 +226,9 @@ def generate_package_docs(packages, root, repo, simulate=False):
         run_txt += '<summary><b><a id="build">BUILD CONTAINER</b></summary>\n<br>\n\n'
         run_txt += "If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:\n"
         run_txt += "```bash\n"
-        run_txt += f"jetson-containers build {pkg_name}\n"
+        run_txt += f"blueberry-jetson-containers build {pkg_name}\n"
         run_txt += "```\n"
-        run_txt += "The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.\n"
+        run_txt += "The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.\n"
         run_txt += "</details>\n"
         
         #if docs:
@@ -299,7 +299,7 @@ if __name__ == "__main__":
     parser.add_argument('packages', type=str, nargs='*', default=[], help='packages to generate docs for')
     
     parser.add_argument('--root', type=str, default=os.path.dirname(os.path.dirname(__file__)))
-    parser.add_argument('--repo', type=str, default='https://github.com/dusty-nv/jetson-containers')
+    parser.add_argument('--repo', type=str, default='https://github.com/dusty-nv/blueberry-jetson-containers')
     parser.add_argument('--user', type=str, default='dustynv', help="the DockerHub user for registry container images")
     parser.add_argument('--password', type=str, default='', help="DockerHub password (only needed for 'registry' command)")
     parser.add_argument('--skip-packages', type=str, default='')

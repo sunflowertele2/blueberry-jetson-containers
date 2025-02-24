@@ -1,5 +1,5 @@
 
-from jetson_containers import CUDA_ARCHITECTURES
+from blueberry_jetson_containers import CUDA_ARCHITECTURES
 
 def ctranslate2(version, requires=None, default=False):
     ct = package.copy()

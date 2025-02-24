@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
+from blueberry_jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
 
 def build_cudf(version, arrow='arrow', repo='dusty-nv/cudf', requires=None, default=False):
     cudf = package.copy()

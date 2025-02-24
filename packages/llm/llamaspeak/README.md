@@ -3,15 +3,15 @@
 > [`CONTAINERS`](#user-content-containers) [`IMAGES`](#user-content-images) [`RUN`](#user-content-run) [`BUILD`](#user-content-build)
 
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/llamaspeak_voice_clip.gif">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/llamaspeak_voice_clip.gif">
 
 > [!NOTE]  
-> For llamaspeak version 2 with multimodal support, see the [`local_llm`](https://github.com/dusty-nv/jetson-containers/tree/master/packages/llm/local_llm) container
+> For llamaspeak version 2 with multimodal support, see the [`local_llm`](https://github.com/dusty-nv/blueberry-jetson-containers/tree/master/packages/llm/local_llm) container
 
 * Talk live with LLM's using [NVIDIA Riva](/packages/audio/riva-client) ASR and TTS!
 * Requires the [`riva-server`](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/riva/resources/riva_quickstart_arm64) and [`text-generation-webui`](/packages/llm/text-generation-webui) to be running
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/llamaspeak_block_diagram.jpg">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/llamaspeak_block_diagram.jpg">
 
 ### Start Riva
 
@@ -55,13 +55,13 @@ See here for command-line arguments:  https://github.com/oobabooga/text-generati
 Browsers require HTTPS to be used in order to access the client's microphone.  Hence, you'll need to create a self-signed SSL certificate and key:
 
 ```bash
-$ cd /path/to/your/jetson-containers/data
+$ cd /path/to/your/blueberry-jetson-containers/data
 $ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes -subj '/CN=localhost'
 ```
 
-You'll want to place these in your [`jetson-containers/data`](/data) directory, because this gets automatically mounted into the containers under `/data`, and will keep your SSL certificate persistent across container runs.  When you first navigate your browser to a page that uses these self-signed certificates, it will issue you a warning since they don't originate from a trusted authority:
+You'll want to place these in your [`blueberry-jetson-containers/data`](/data) directory, because this gets automatically mounted into the containers under `/data`, and will keep your SSL certificate persistent across container runs.  When you first navigate your browser to a page that uses these self-signed certificates, it will issue you a warning since they don't originate from a trusted authority:
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/ssl_warning.jpg" width="400">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/ssl_warning.jpg" width="400">
 
 You can choose to override this, and it won't re-appear again until you change certificates or your device's hostname/IP changes.
 
@@ -92,7 +92,7 @@ The default port is `8050`, but that can be changed with the `--port` argument. 
 
 | **`llamaspeak`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`llamaspeak_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/llamaspeak_jp51.yml?label=llamaspeak:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/llamaspeak_jp51.yml) [![`llamaspeak_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/llamaspeak_jp60.yml?label=llamaspeak:jp60)](https://github.com/dusty-nv/jetson-containers/actions/workflows/llamaspeak_jp60.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`llamaspeak_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/llamaspeak_jp51.yml?label=llamaspeak:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/llamaspeak_jp51.yml) [![`llamaspeak_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/llamaspeak_jp60.yml?label=llamaspeak:jp60)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/llamaspeak_jp60.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=34.1.0']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`python`](/packages/build/python) [`riva-client:python`](/packages/audio/riva-client) [`numpy`](/packages/numpy) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile`](Dockerfile) |
@@ -119,27 +119,27 @@ The default port is `8050`, but that can be changed with the `--port` argument. 
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag llamaspeak)
+blueberry-jetson-containers run $(autotag llamaspeak)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/llamaspeak:r35.4.1
+blueberry-jetson-containers run dustynv/llamaspeak:r35.4.1
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/llamaspeak:r35.4.1
 ```
-> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
+> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
 > <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag llamaspeak)
+blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag llamaspeak)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag llamaspeak) my_app --abc xyz
+blueberry-jetson-containers run $(autotag llamaspeak) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
@@ -149,7 +149,7 @@ You can pass any options to it that you would to [`docker run`](https://docs.doc
 
 If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:
 ```bash
-jetson-containers build llamaspeak
+blueberry-jetson-containers build llamaspeak
 ```
-The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.
+The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.
 </details>

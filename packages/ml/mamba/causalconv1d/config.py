@@ -1,4 +1,4 @@
-from jetson_containers import CUDA_ARCHITECTURES
+from blueberry_jetson_containers import CUDA_ARCHITECTURES
 
 def causalconv1d(version, requires=None, default=False):
     pkg = package.copy()

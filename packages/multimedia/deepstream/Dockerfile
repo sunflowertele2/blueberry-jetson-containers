@@ -20,7 +20,7 @@ RUN wget --quiet --show-progress --progress=bar:force:noscroll --no-check-certif
     rm ${DEEPSTREAM_TAR}
     
 
-# https://github.com/dusty-nv/jetson-containers/issues/405#issue-2155595703
+# https://github.com/dusty-nv/blueberry-jetson-containers/issues/405#issue-2155595703
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
 		python-is-python3 \

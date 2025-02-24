@@ -38,7 +38,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:noetic-ros-base`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-noetic-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-noetic-ros-base_jp46.yml?label=ros-noetic-ros-base:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-noetic-ros-base_jp46.yml) [![`ros-noetic-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-noetic-ros-base_jp51.yml?label=ros-noetic-ros-base:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-noetic-ros-base_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-noetic-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-noetic-ros-base_jp46.yml?label=ros-noetic-ros-base:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-noetic-ros-base_jp46.yml) [![`ros-noetic-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-noetic-ros-base_jp51.yml?label=ros-noetic-ros-base:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-noetic-ros-base_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros.noetic`](Dockerfile.ros.noetic) |
@@ -46,7 +46,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:noetic-ros-core`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-noetic-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-noetic-ros-core_jp46.yml?label=ros-noetic-ros-core:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-noetic-ros-core_jp46.yml) [![`ros-noetic-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-noetic-ros-core_jp51.yml?label=ros-noetic-ros-core:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-noetic-ros-core_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-noetic-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-noetic-ros-core_jp46.yml?label=ros-noetic-ros-core:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-noetic-ros-core_jp46.yml) [![`ros-noetic-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-noetic-ros-core_jp51.yml?label=ros-noetic-ros-core:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-noetic-ros-core_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros.noetic`](Dockerfile.ros.noetic) |
@@ -54,7 +54,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:noetic-desktop`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-noetic-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-noetic-desktop_jp51.yml?label=ros-noetic-desktop:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-noetic-desktop_jp51.yml) [![`ros-noetic-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-noetic-desktop_jp46.yml?label=ros-noetic-desktop:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-noetic-desktop_jp46.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-noetic-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-noetic-desktop_jp51.yml?label=ros-noetic-desktop:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-noetic-desktop_jp51.yml) [![`ros-noetic-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-noetic-desktop_jp46.yml?label=ros-noetic-desktop:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-noetic-desktop_jp46.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros.noetic`](Dockerfile.ros.noetic) |
@@ -62,7 +62,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:foxy-ros-base`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-foxy-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-foxy-ros-base_jp51.yml?label=ros-foxy-ros-base:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-foxy-ros-base_jp51.yml) [![`ros-foxy-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-foxy-ros-base_jp46.yml?label=ros-foxy-ros-base:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-foxy-ros-base_jp46.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-foxy-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-foxy-ros-base_jp51.yml?label=ros-foxy-ros-base:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-foxy-ros-base_jp51.yml) [![`ros-foxy-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-foxy-ros-base_jp46.yml?label=ros-foxy-ros-base:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-foxy-ros-base_jp46.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -70,7 +70,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:foxy-ros-core`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-foxy-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-foxy-ros-core_jp46.yml?label=ros-foxy-ros-core:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-foxy-ros-core_jp46.yml) [![`ros-foxy-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-foxy-ros-core_jp51.yml?label=ros-foxy-ros-core:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-foxy-ros-core_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-foxy-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-foxy-ros-core_jp46.yml?label=ros-foxy-ros-core:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-foxy-ros-core_jp46.yml) [![`ros-foxy-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-foxy-ros-core_jp51.yml?label=ros-foxy-ros-core:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-foxy-ros-core_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -78,7 +78,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:foxy-desktop`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-foxy-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-foxy-desktop_jp46.yml?label=ros-foxy-desktop:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-foxy-desktop_jp46.yml) [![`ros-foxy-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-foxy-desktop_jp51.yml?label=ros-foxy-desktop:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-foxy-desktop_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-foxy-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-foxy-desktop_jp46.yml?label=ros-foxy-desktop:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-foxy-desktop_jp46.yml) [![`ros-foxy-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-foxy-desktop_jp51.yml?label=ros-foxy-desktop:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-foxy-desktop_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dependants | [`jetson-inference:foxy`](/packages/jetson-inference) [`nano_llm:24.4-foxy`](/packages/llm/nano_llm) [`nano_llm:24.4.1-foxy`](/packages/llm/nano_llm) [`nano_llm:24.5-foxy`](/packages/llm/nano_llm) [`nano_llm:24.5.1-foxy`](/packages/llm/nano_llm) [`nano_llm:24.6-foxy`](/packages/llm/nano_llm) [`nano_llm:24.7-foxy`](/packages/llm/nano_llm) [`nano_llm:main-foxy`](/packages/llm/nano_llm) [`ros:foxy-foxglove`](/packages/ros) |
@@ -87,7 +87,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:galactic-ros-base`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-galactic-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-galactic-ros-base_jp51.yml?label=ros-galactic-ros-base:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-galactic-ros-base_jp51.yml) [![`ros-galactic-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-galactic-ros-base_jp46.yml?label=ros-galactic-ros-base:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-galactic-ros-base_jp46.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-galactic-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-galactic-ros-base_jp51.yml?label=ros-galactic-ros-base:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-galactic-ros-base_jp51.yml) [![`ros-galactic-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-galactic-ros-base_jp46.yml?label=ros-galactic-ros-base:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-galactic-ros-base_jp46.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -95,7 +95,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:galactic-ros-core`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-galactic-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-galactic-ros-core_jp51.yml?label=ros-galactic-ros-core:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-galactic-ros-core_jp51.yml) [![`ros-galactic-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-galactic-ros-core_jp46.yml?label=ros-galactic-ros-core:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-galactic-ros-core_jp46.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-galactic-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-galactic-ros-core_jp51.yml?label=ros-galactic-ros-core:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-galactic-ros-core_jp51.yml) [![`ros-galactic-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-galactic-ros-core_jp46.yml?label=ros-galactic-ros-core:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-galactic-ros-core_jp46.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -103,7 +103,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:galactic-desktop`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-galactic-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-galactic-desktop_jp46.yml?label=ros-galactic-desktop:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-galactic-desktop_jp46.yml) [![`ros-galactic-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-galactic-desktop_jp51.yml?label=ros-galactic-desktop:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-galactic-desktop_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-galactic-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-galactic-desktop_jp46.yml?label=ros-galactic-desktop:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-galactic-desktop_jp46.yml) [![`ros-galactic-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-galactic-desktop_jp51.yml?label=ros-galactic-desktop:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-galactic-desktop_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dependants | [`jetson-inference:galactic`](/packages/jetson-inference) [`nano_llm:24.4-galactic`](/packages/llm/nano_llm) [`nano_llm:24.4.1-galactic`](/packages/llm/nano_llm) [`nano_llm:24.5-galactic`](/packages/llm/nano_llm) [`nano_llm:24.5.1-galactic`](/packages/llm/nano_llm) [`nano_llm:24.6-galactic`](/packages/llm/nano_llm) [`nano_llm:24.7-galactic`](/packages/llm/nano_llm) [`nano_llm:main-galactic`](/packages/llm/nano_llm) [`ros:galactic-foxglove`](/packages/ros) |
@@ -112,7 +112,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:humble-ros-base`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-humble-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-ros-base_jp46.yml?label=ros-humble-ros-base:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-ros-base_jp46.yml) [![`ros-humble-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-ros-base_jp51.yml?label=ros-humble-ros-base:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-ros-base_jp51.yml) [![`ros-humble-ros-base_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-ros-base_jp60.yml?label=ros-humble-ros-base:jp60)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-ros-base_jp60.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-humble-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-ros-base_jp46.yml?label=ros-humble-ros-base:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-ros-base_jp46.yml) [![`ros-humble-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-ros-base_jp51.yml?label=ros-humble-ros-base:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-ros-base_jp51.yml) [![`ros-humble-ros-base_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-ros-base_jp60.yml?label=ros-humble-ros-base:jp60)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-ros-base_jp60.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -120,7 +120,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:humble-ros-core`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-humble-ros-core_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-ros-core_jp60.yml?label=ros-humble-ros-core:jp60)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-ros-core_jp60.yml) [![`ros-humble-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-ros-core_jp46.yml?label=ros-humble-ros-core:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-ros-core_jp46.yml) [![`ros-humble-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-ros-core_jp51.yml?label=ros-humble-ros-core:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-ros-core_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-humble-ros-core_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-ros-core_jp60.yml?label=ros-humble-ros-core:jp60)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-ros-core_jp60.yml) [![`ros-humble-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-ros-core_jp46.yml?label=ros-humble-ros-core:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-ros-core_jp46.yml) [![`ros-humble-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-ros-core_jp51.yml?label=ros-humble-ros-core:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-ros-core_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -128,7 +128,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:humble-desktop`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-humble-desktop_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-desktop_jp60.yml?label=ros-humble-desktop:jp60)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-desktop_jp60.yml) [![`ros-humble-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-desktop_jp46.yml?label=ros-humble-desktop:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-desktop_jp46.yml) [![`ros-humble-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-humble-desktop_jp51.yml?label=ros-humble-desktop:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-humble-desktop_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-humble-desktop_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-desktop_jp60.yml?label=ros-humble-desktop:jp60)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-desktop_jp60.yml) [![`ros-humble-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-desktop_jp46.yml?label=ros-humble-desktop:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-desktop_jp46.yml) [![`ros-humble-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-humble-desktop_jp51.yml?label=ros-humble-desktop:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-humble-desktop_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dependants | [`jetson-inference:humble`](/packages/jetson-inference) [`nano_llm:24.4-humble`](/packages/llm/nano_llm) [`nano_llm:24.4.1-humble`](/packages/llm/nano_llm) [`nano_llm:24.5-humble`](/packages/llm/nano_llm) [`nano_llm:24.5.1-humble`](/packages/llm/nano_llm) [`nano_llm:24.6-humble`](/packages/llm/nano_llm) [`nano_llm:24.7-humble`](/packages/llm/nano_llm) [`nano_llm:main-humble`](/packages/llm/nano_llm) [`ros:humble-foxglove`](/packages/ros) |
@@ -137,7 +137,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:iron-ros-base`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-iron-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-iron-ros-base_jp46.yml?label=ros-iron-ros-base:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-iron-ros-base_jp46.yml) [![`ros-iron-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-iron-ros-base_jp51.yml?label=ros-iron-ros-base:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-iron-ros-base_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-iron-ros-base_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-iron-ros-base_jp46.yml?label=ros-iron-ros-base:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-iron-ros-base_jp46.yml) [![`ros-iron-ros-base_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-iron-ros-base_jp51.yml?label=ros-iron-ros-base:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-iron-ros-base_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -145,7 +145,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:iron-ros-core`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-iron-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-iron-ros-core_jp46.yml?label=ros-iron-ros-core:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-iron-ros-core_jp46.yml) [![`ros-iron-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-iron-ros-core_jp51.yml?label=ros-iron-ros-core:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-iron-ros-core_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-iron-ros-core_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-iron-ros-core_jp46.yml?label=ros-iron-ros-core:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-iron-ros-core_jp46.yml) [![`ros-iron-ros-core_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-iron-ros-core_jp51.yml?label=ros-iron-ros-core:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-iron-ros-core_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dockerfile | [`Dockerfile.ros2`](Dockerfile.ros2) |
@@ -153,7 +153,7 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 
 | **`ros:iron-desktop`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`ros-iron-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-iron-desktop_jp46.yml?label=ros-iron-desktop:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-iron-desktop_jp46.yml) [![`ros-iron-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/ros-iron-desktop_jp51.yml?label=ros-iron-desktop:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/ros-iron-desktop_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`ros-iron-desktop_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-iron-desktop_jp46.yml?label=ros-iron-desktop:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-iron-desktop_jp46.yml) [![`ros-iron-desktop_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/ros-iron-desktop_jp51.yml?label=ros-iron-desktop:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/ros-iron-desktop_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda:12.2`](/packages/cuda/cuda) [`cudnn:8.9`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`opencv:deb`](/packages/opencv) [`cmake`](/packages/build/cmake/cmake_pip) |
 | &nbsp;&nbsp;&nbsp;Dependants | [`jetson-inference:iron`](/packages/jetson-inference) [`nano_llm:24.4-iron`](/packages/llm/nano_llm) [`nano_llm:24.4.1-iron`](/packages/llm/nano_llm) [`nano_llm:24.5-iron`](/packages/llm/nano_llm) [`nano_llm:24.5.1-iron`](/packages/llm/nano_llm) [`nano_llm:24.6-iron`](/packages/llm/nano_llm) [`nano_llm:24.7-iron`](/packages/llm/nano_llm) [`nano_llm:main-iron`](/packages/llm/nano_llm) [`ros:iron-foxglove`](/packages/ros) |
@@ -377,27 +377,27 @@ Examples of this being done you can find in the [`ros:humble-foxglove`](/package
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag ros)
+blueberry-jetson-containers run $(autotag ros)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/ros:humble-llm-r35.4.1
+blueberry-jetson-containers run dustynv/ros:humble-llm-r35.4.1
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/ros:humble-llm-r35.4.1
 ```
-> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
+> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
 > <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag ros)
+blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag ros)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag ros) my_app --abc xyz
+blueberry-jetson-containers run $(autotag ros) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
@@ -407,7 +407,7 @@ You can pass any options to it that you would to [`docker run`](https://docs.doc
 
 If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:
 ```bash
-jetson-containers build ros
+blueberry-jetson-containers build ros
 ```
-The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.
+The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.
 </details>

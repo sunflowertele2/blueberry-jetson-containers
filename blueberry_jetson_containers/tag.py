@@ -23,7 +23,7 @@ import sys
 import pprint
 import argparse
 
-from jetson_containers import (find_package, find_packages, find_container, L4T_VERSION, JETPACK_VERSION, CUDA_VERSION)
+from blueberry_jetson_containers import (find_package, find_packages, find_container, L4T_VERSION, JETPACK_VERSION, CUDA_VERSION)
   
     
 if __name__ == "__main__":

@@ -40,5 +40,5 @@ cd $HOLOHUB_BUILD_PATH
 python3 /opt/nvidia/holohub/applications/endoscopy_tool_tracking/python/endoscopy_tool_tracking.python --data /opt/nvidia/holohub/data/endoscopy/
 ```
 
-These apps are often more complex than the examples included in the Holoscan-SDK. As such, many apps will require that you build them first with CMake, regardless of whether you are using Python or C++. Note the use of the `--buildpath` arg, this redirects the build location from the default location to the `/data` volume that is mounted by the Jetson-Containers repo. This ensures that builds will persist across Docker runs.
+These apps are often more complex than the examples included in the Holoscan-SDK. As such, many apps will require that you build them first with CMake, regardless of whether you are using Python or C++. Note the use of the `--buildpath` arg, this redirects the build location from the default location to the `/data` volume that is mounted by the blueberry-jetson-containers repo. This ensures that builds will persist across Docker runs.
 

@@ -2,7 +2,7 @@
 #
 # Llama benchmark with MLC. This script should be invoked from the host and will run 
 # the MLC container with the commands to download, quantize, and benchmark the models.
-# It will add its collected performance data to jetson-containers/data/benchmarks/mlc.csv 
+# It will add its collected performance data to blueberry-jetson-containers/data/benchmarks/mlc.csv 
 #
 # Set the HUGGINGFACE_TOKEN environment variable to your HuggingFace account token 
 # that has been granted access to the Meta-Llama models.  You can run it like this:
@@ -57,7 +57,7 @@ function benchmark()
         fi
       fi
       
-      mkdir -p $(jetson-containers data)/models/mlc/cache || true ;
+      mkdir -p $(blueberry-jetson-containers data)/models/mlc/cache || true ;
       
       run_cmd="\
         python3 benchmark.py \
@@ -84,7 +84,7 @@ function benchmark()
         bash test.sh $model_name \${MODEL_REPO} "
     fi
     
-    jetson-containers run \
+    blueberry-jetson-containers run \
         -e HUGGINGFACE_TOKEN=${HUGGINGFACE_TOKEN} \
         -e QUANTIZATION=${QUANTIZATION} \
         -e SKIP_QUANTIZATION=${SKIP_QUANTIZATION} \
@@ -96,7 +96,7 @@ function benchmark()
         -e OUTPUT_CSV=${OUTPUT_CSV} \
         -e MODEL_REPO=${model_repo} \
         -e MODEL_ROOT=${model_root} \
-        -v $(jetson-containers root)/packages/llm/mlc:/test \
+        -v $(blueberry-jetson-containers root)/packages/llm/mlc:/test \
         -w /test \
         dustynv/mlc:0.1.4-r36.4.2 /bin/bash -c "$run_cmd"
 }

@@ -1,4 +1,4 @@
-from jetson_containers import CUDA_ARCHITECTURES, CUDA_VERSION, update_dependencies
+from blueberry_jetson_containers import CUDA_ARCHITECTURES, CUDA_VERSION, update_dependencies
 from packaging.version import Version
    
 def tensorrt_llm(version, branch=None, patch=None, src=None, depends=None, requires=None, default=False):

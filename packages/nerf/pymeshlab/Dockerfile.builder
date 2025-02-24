@@ -1,6 +1,6 @@
 #
-# jetson-containers build pymeshlab:builder
-# OPTIONAL_PERMISSION_ARGS=true jetson-containers run $(autotag pymeshlab:builder)
+# blueberry-jetson-containers build pymeshlab:builder
+# OPTIONAL_PERMISSION_ARGS=true blueberry-jetson-containers run $(autotag pymeshlab:builder)
 #
 ARG BASE_IMAGE
 FROM ${BASE_IMAGE}

@@ -1,21 +1,21 @@
 name: ❓ Question
-description: Ask an jetson-containers question
+description: Ask an blueberry-jetson-containers question
 # title: " "
 labels: [question]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for asking an jetson-containers ❓ Question!
+        Thank you for asking an blueberry-jetson-containers ❓ Question!
 
   - type: checkboxes
     attributes:
       label: Search before asking
       description: >
-        Please search the jetson-containers [Jetson PlayGround](https://www.jetson-ai-lab.com/), [Jetson Forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/70) and [issues](https://github.com/dusty-nv/jetson-containers/issues) to see if a similar feature request already exists.
+        Please search the blueberry-jetson-containers [Jetson PlayGround](https://www.jetson-ai-lab.com/), [Jetson Forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/70) and [issues](https://github.com/dusty-nv/blueberry-jetson-containers/issues) to see if a similar feature request already exists.
       options:
         - label: >
-            I have searched the jetson-containers [issues](https://github.com/dusty-nv/jetson-containers/issues) and found no similar feature requests.
+            I have searched the blueberry-jetson-containers [issues](https://github.com/dusty-nv/blueberry-jetson-containers/issues) and found no similar feature requests.
           required: true
 
   - type: textarea

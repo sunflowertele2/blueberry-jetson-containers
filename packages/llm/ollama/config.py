@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from jetson_containers import CUDA_ARCHITECTURES, CUDA_VERSION, JETPACK_VERSION
+from blueberry_jetson_containers import CUDA_ARCHITECTURES, CUDA_VERSION, JETPACK_VERSION
 
 # ollama looks for this during its build, and it can't be mounted in
 src = '/etc/nv_tegra_release' 

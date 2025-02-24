@@ -1,5 +1,5 @@
 
-<a href="https://youtu.be/ayqKpQNd1Jw"><img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/nanodb_horse.gif"></a>
+<a href="https://youtu.be/ayqKpQNd1Jw"><img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/nanodb_horse.gif"></a>
 
 NanoDB is a CUDA-optimized multimodal vector database that uses embeddings from the [CLIP](https://openai.com/research/clip) vision transformer for txt2img and img2img similarity search. The [demo video](https://youtu.be/ayqKpQNd1Jw) above is running in realtime on 275K images from the MS COCO image captioning dataset using Jetson AGX Orin, and shows a fundamental capability in multimodal applications - operating in a shared embedding space between text/images/etc., and being able to query with a deep contextual understanding. 
 
@@ -7,7 +7,7 @@ In addition to effectively indexing and searching your data at the edge, these v
 
 ### Indexing Data
 
-NanoDB can recursively scan directories of images, compute their CLIP embeddings, and save them to disk in float16 format.  To ingest content into the database, start the container with the path to your dataset mounted (or store your dataset under `jetson-containers/data`, which is automatically mounted into the container under `/data`)  And run the `nanodb --scan` command:
+NanoDB can recursively scan directories of images, compute their CLIP embeddings, and save them to disk in float16 format.  To ingest content into the database, start the container with the path to your dataset mounted (or store your dataset under `blueberry-jetson-containers/data`, which is automatically mounted into the container under `/data`)  And run the `nanodb --scan` command:
 
 ```bash
 ./run.sh -v /path/to/your/dataset:/my_dataset $(./autotag nanodb) \
@@ -83,4 +83,4 @@ To spin up the Gradio server, start nanodb with the `--server` command-line argu
 
 Then navigate your browser to `http://HOSTNAME:7860?__theme=dark`, and you can enter text search queries as well as drag/upload images:
 
-<a href="https://youtu.be/ayqKpQNd1Jw"><img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/nanodb_tennis.jpg"></a>
+<a href="https://youtu.be/ayqKpQNd1Jw"><img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/nanodb_tennis.jpg"></a>

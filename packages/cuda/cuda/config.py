@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION, JETPACK_VERSION, CUDA_VERSION, CUDA_ARCHITECTURES, LSB_RELEASE
+from blueberry_jetson_containers import L4T_VERSION, JETPACK_VERSION, CUDA_VERSION, CUDA_ARCHITECTURES, LSB_RELEASE
 from packaging.version import Version
 
 import os
@@ -18,7 +18,7 @@ def cuda_build_args(version):
 def pip_cache(version, requires=None):
     """
     Defines a container that just sets the environment for using the pip caching server.
-    https://github.com/dusty-nv/jetson-containers/blob/master/docs/build.md#pip-server
+    https://github.com/dusty-nv/blueberry-jetson-containers/blob/master/docs/build.md#pip-server
     """
     short_version = f"cu{version.replace('.', '')}"
     repo_path = f"jp{JETPACK_VERSION.major}/{short_version}"

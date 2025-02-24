@@ -13,7 +13,7 @@ To quantize and benchmark a model, run the [`benchmark.sh`](benchmark.sh) script
 HUGGINGFACE_TOKEN=hf_abc123def ./benchmark.sh meta-llama/Llama-2-7b-hf
 ```
 
-This will run the quantization and benchmarking in the MLC container, and save the performance data to `jetson-containers/data/benchmarks/mlc.csv`.  If you are accessing a gated model, substitute your HuggingFace account's API key above.  Omitting the model will benchmark a default set of Llama models.  See [`benchmark.sh`](benchmark.sh) for various environment variables you can set.
+This will run the quantization and benchmarking in the MLC container, and save the performance data to `blueberry-jetson-containers/data/benchmarks/mlc.csv`.  If you are accessing a gated model, substitute your HuggingFace account's API key above.  Omitting the model will benchmark a default set of Llama models.  See [`benchmark.sh`](benchmark.sh) for various environment variables you can set.
 
 ```
 AVERAGE OVER 3 RUNS, input=16, output=128
@@ -83,27 +83,27 @@ The prefill time is how long the model takes to process the input context before
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag mlc)
+blueberry-jetson-containers run $(autotag mlc)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/mlc:0.1.4-r36.4.2
+blueberry-jetson-containers run dustynv/mlc:0.1.4-r36.4.2
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/mlc:0.1.4-r36.4.2
 ```
-> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
+> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
 > <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag mlc)
+blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag mlc)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag mlc) my_app --abc xyz
+blueberry-jetson-containers run $(autotag mlc) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
@@ -113,7 +113,7 @@ You can pass any options to it that you would to [`docker run`](https://docs.doc
 
 If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:
 ```bash
-jetson-containers build mlc
+blueberry-jetson-containers build mlc
 ```
-The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.
+The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.
 </details>

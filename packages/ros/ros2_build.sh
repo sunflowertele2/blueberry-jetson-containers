@@ -57,7 +57,7 @@ pip3 install --upgrade --no-cache-dir \
 # upgrade cmake - https://stackoverflow.com/a/56690743
 # this is needed to build some of the ROS2 packages	  
 # use pip to upgrade cmake instead because of kitware's rotating GPG keys:
-# https://github.com/dusty-nv/jetson-containers/issues/216			  
+# https://github.com/dusty-nv/blueberry-jetson-containers/issues/216			  
 python3 -m pip install --upgrade pip
 pip3 install --no-cache-dir scikit-build
 pip3 install --upgrade --no-cache-dir --verbose cmake
@@ -111,7 +111,7 @@ rosinstall_generator --deps --rosdistro ${ROS_DISTRO} ${ROS_PACKAGE} \
 cat ros2.${ROS_DISTRO}.${ROS_PACKAGE}.rosinstall
 vcs import src < ros2.${ROS_DISTRO}.${ROS_PACKAGE}.rosinstall
     
-# https://github.com/dusty-nv/jetson-containers/issues/181
+# https://github.com/dusty-nv/blueberry-jetson-containers/issues/181
 rm -r ${ROS_ROOT}/src/ament_cmake
 git -C ${ROS_ROOT}/src/ clone https://github.com/ament/ament_cmake -b ${ROS_DISTRO}
 
@@ -133,7 +133,7 @@ if [ "$ROS_DISTRO" = "humble" ] || [ "$ROS_DISTRO" = "iron" ] && [ $(lsb_release
 	apt-get purge -y pybind11-dev
 	pip3 install --upgrade --no-cache-dir pybind11-global
    
-	# https://github.com/dusty-nv/jetson-containers/issues/160#issuecomment-1429572145
+	# https://github.com/dusty-nv/blueberry-jetson-containers/issues/160#issuecomment-1429572145
 	git -C /tmp clone -b yaml-cpp-0.6.0 https://github.com/jbeder/yaml-cpp.git
 	cmake -S /tmp/yaml-cpp -B /tmp/yaml-cpp/BUILD -DBUILD_SHARED_LIBS=ON
 	cmake --build /tmp/yaml-cpp/BUILD --parallel $(nproc --ignore=1)

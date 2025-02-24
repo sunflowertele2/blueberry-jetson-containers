@@ -1,5 +1,5 @@
 
-from jetson_containers import CUDA_VERSION
+from blueberry_jetson_containers import CUDA_VERSION
 from packaging.version import Version
 
 package['build_args'] = {

@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 
 def NanoLLM(version, branch=None, requires=None, default=False, ros=['foxy', 'galactic', 'humble', 'iron']):
     pkg = package.copy()

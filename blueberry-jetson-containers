@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Launcher for jetson-containers build.sh, run.sh, and autotag
+# Launcher for blueberry-jetson-containers build.sh, run.sh, and autotag
 ROOT="$(dirname "$(readlink -f "$0")")"
 SCRIPTS="$ROOT/scripts"
 COMMAND=$1
@@ -25,7 +25,7 @@ elif [ "$COMMAND" = "data" ]; then
 	echo $ROOT/data
 else
 	echo ''
-	echo 'jetson-containers > Invalid command'
+	echo 'blueberry-jetson-containers > Invalid command'
 	echo ''
 	echo '   * build [PACKAGES]'
 	echo '   * run OPTIONS [CONTAINER:TAG] CMD'
@@ -36,6 +36,6 @@ else
 	echo '   * root (prints repo path)'
 	echo '   * data (prints data path)'
 	echo ''
-	echo 'Run "jetson-containers <CMD> --help" for more info.'
+	echo 'Run "blueberry-jetson-containers <CMD> --help" for more info.'
 	exit 1
 fi

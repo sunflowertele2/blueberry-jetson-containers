@@ -1,4 +1,4 @@
-from jetson_containers import update_dependencies, get_json_value_from_url
+from blueberry_jetson_containers import update_dependencies, get_json_value_from_url
 from packaging.version import Version
 
 

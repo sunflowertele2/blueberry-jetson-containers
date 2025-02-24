@@ -1,7 +1,7 @@
 import requests
 import yaml
 
-from jetson_containers import github_latest_tag
+from blueberry_jetson_containers import github_latest_tag
 
 
 def latest_deps_versions(branch_name):

@@ -1,4 +1,4 @@
-from jetson_containers import L4T_VERSION, PYTHON_VERSION
+from blueberry_jetson_containers import L4T_VERSION, PYTHON_VERSION
 from packaging.version import Version
 
 from ..ml.tensorflow.version import TENSORFLOW_VERSION

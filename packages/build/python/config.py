@@ -1,5 +1,5 @@
 
-from jetson_containers import PYTHON_VERSION
+from blueberry_jetson_containers import PYTHON_VERSION
 from packaging.version import Version
 
 def python(version, requires=None) -> list:

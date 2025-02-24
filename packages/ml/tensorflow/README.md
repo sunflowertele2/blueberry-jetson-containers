@@ -13,7 +13,7 @@ The TensorFlow wheels used in these are from https://docs.nvidia.com/deeplearnin
 
 | **`tensorflow`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`tensorflow_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/tensorflow_jp46.yml?label=tensorflow:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/tensorflow_jp46.yml) [![`tensorflow_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/tensorflow_jp51.yml?label=tensorflow:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/tensorflow_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`tensorflow_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/tensorflow_jp46.yml?label=tensorflow:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/tensorflow_jp46.yml) [![`tensorflow_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/tensorflow_jp51.yml?label=tensorflow:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/tensorflow_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda`](/packages/cuda/cuda) [`cudnn`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`protobuf:cpp`](/packages/build/protobuf/protobuf_cpp) |
 | &nbsp;&nbsp;&nbsp;Dependants | [`l4t-tensorflow:tf1`](/packages/l4t/l4t-tensorflow) |
@@ -22,7 +22,7 @@ The TensorFlow wheels used in these are from https://docs.nvidia.com/deeplearnin
 
 | **`tensorflow2`** | |
 | :-- | :-- |
-| &nbsp;&nbsp;&nbsp;Builds | [![`tensorflow2_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/tensorflow2_jp46.yml?label=tensorflow2:jp46)](https://github.com/dusty-nv/jetson-containers/actions/workflows/tensorflow2_jp46.yml) [![`tensorflow2_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/tensorflow2_jp60.yml?label=tensorflow2:jp60)](https://github.com/dusty-nv/jetson-containers/actions/workflows/tensorflow2_jp60.yml) [![`tensorflow2_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/jetson-containers/tensorflow2_jp51.yml?label=tensorflow2:jp51)](https://github.com/dusty-nv/jetson-containers/actions/workflows/tensorflow2_jp51.yml) |
+| &nbsp;&nbsp;&nbsp;Builds | [![`tensorflow2_jp46`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/tensorflow2_jp46.yml?label=tensorflow2:jp46)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/tensorflow2_jp46.yml) [![`tensorflow2_jp60`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/tensorflow2_jp60.yml?label=tensorflow2:jp60)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/tensorflow2_jp60.yml) [![`tensorflow2_jp51`](https://img.shields.io/github/actions/workflow/status/dusty-nv/blueberry-jetson-containers/tensorflow2_jp51.yml?label=tensorflow2:jp51)](https://github.com/dusty-nv/blueberry-jetson-containers/actions/workflows/tensorflow2_jp51.yml) |
 | &nbsp;&nbsp;&nbsp;Requires | `L4T ['>=32.6']` |
 | &nbsp;&nbsp;&nbsp;Dependencies | [`build-essential`](/packages/build/build-essential) [`cuda`](/packages/cuda/cuda) [`cudnn`](/packages/cuda/cudnn) [`python`](/packages/build/python) [`tensorrt`](/packages/tensorrt) [`numpy`](/packages/numpy) [`protobuf:cpp`](/packages/build/protobuf/protobuf_cpp) |
 | &nbsp;&nbsp;&nbsp;Dependants | [`l4t-ml`](/packages/l4t/l4t-ml) [`l4t-tensorflow:tf2`](/packages/l4t/l4t-tensorflow) |
@@ -51,27 +51,27 @@ The TensorFlow wheels used in these are from https://docs.nvidia.com/deeplearnin
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag tensorflow)
+blueberry-jetson-containers run $(autotag tensorflow)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/tensorflow:r32.7.1
+blueberry-jetson-containers run dustynv/tensorflow:r32.7.1
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/tensorflow:r32.7.1
 ```
-> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
+> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
 > <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag tensorflow)
+blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag tensorflow)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag tensorflow) my_app --abc xyz
+blueberry-jetson-containers run $(autotag tensorflow) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
@@ -81,7 +81,7 @@ You can pass any options to it that you would to [`docker run`](https://docs.doc
 
 If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:
 ```bash
-jetson-containers build tensorflow
+blueberry-jetson-containers build tensorflow
 ```
-The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.
+The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.
 </details>

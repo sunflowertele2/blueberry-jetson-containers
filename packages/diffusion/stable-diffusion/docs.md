@@ -1,5 +1,5 @@
 
-<img src="https://raw.githubusercontent.com/dusty-nv/jetson-containers/docs/docs/images/diffusion_astronaut.jpg">
+<img src="https://raw.githubusercontent.com/dusty-nv/blueberry-jetson-containers/docs/docs/images/diffusion_astronaut.jpg">
 
 Generate images from text (txt2img) or from other images (img2img)
 

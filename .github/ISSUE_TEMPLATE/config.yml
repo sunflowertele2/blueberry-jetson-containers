@@ -2,10 +2,10 @@ blank_issues_enabled: true
 contact_links:
   - name: 📄 Jetson Play Ground
     url: https://www.jetson-ai-lab.com/
-    about: Full jetson-containers Demos
+    about: Full blueberry-jetson-containers Demos
   - name: 💬 Forum
     url: https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/70
-    about: Ask on jetson-containers Community Forum
+    about: Ask on blueberry-jetson-containers Community Forum
   - name: 🎧 Discord
     url: https://discord.gg/qr8jbtYSsx
-    about: Ask on jetson-containers Discord
+    about: Ask on blueberry-jetson-containers Discord

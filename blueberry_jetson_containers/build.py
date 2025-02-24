@@ -2,7 +2,7 @@
 #
 # Container build system for managing package configurations and multi-stage build chains, with automated testing and dependency tracking. 
 #
-# A "package" is composed of a Dockerfile, configs, and test scripts.  These are found under the jetson-containers/packages directory.
+# A "package" is composed of a Dockerfile, configs, and test scripts.  These are found under the blueberry-jetson-containers/packages directory.
 # There are also "meta-packages" that have no Dockerfiles themselves, but specify a set of packages to include (e.g. l4t-pytorch)
 #
 # Configuration metadata (such as the package's dependencies) can be inline YAML in the Dockerfile header.
@@ -11,13 +11,13 @@
 #
 # Some example build scenarios:
 #
-#   $ jetson-containers/build.sh --name=xyz pytorch jupyterlab     # build container with PyTorch and JupyterLab server
-#   $ jetson-containers/build.sh --multiple pytorch tensorflow     # build separate containers for PyTorch and 
-#   $ jetson-containers/build.sh --multiple ros:humble*            # build all ROS Humble containers (can use wildcards)
-#   $ jetson-containers/build.sh ros:humble-desktop pytorch        # build ROS Humble with PyTorch on top 
-#   $ jetson-containers/build.sh --base=xyz:latest pytorch         # add PyTorch to an existing container
+#   $ blueberry-jetson-containers/build.sh --name=xyz pytorch jupyterlab     # build container with PyTorch and JupyterLab server
+#   $ blueberry-jetson-containers/build.sh --multiple pytorch tensorflow     # build separate containers for PyTorch and 
+#   $ blueberry-jetson-containers/build.sh --multiple ros:humble*            # build all ROS Humble containers (can use wildcards)
+#   $ blueberry-jetson-containers/build.sh ros:humble-desktop pytorch        # build ROS Humble with PyTorch on top 
+#   $ blueberry-jetson-containers/build.sh --base=xyz:latest pytorch         # add PyTorch to an existing container
 #
-# Typically the jetson-containers/build.sh wrapper script is used to launch this underlying Python module. jetson-containers can also
+# Typically the blueberry-jetson-containers/build.sh wrapper script is used to launch this underlying Python module. blueberry-jetson-containers can also
 # build external out-of-tree projects that have their own Dockerfile.  And you can add your own package search dirs for other packages.
 #
 import os
@@ -26,7 +26,7 @@ import sys
 import pprint
 import argparse
 
-from jetson_containers import (build_container, build_containers, find_packages, package_search_dirs, set_log_dir, 
+from blueberry_jetson_containers import (build_container, build_containers, find_packages, package_search_dirs, set_log_dir, 
                                L4T_VERSION, JETPACK_VERSION, CUDA_VERSION, PYTHON_VERSION, LSB_RELEASE, LSB_CODENAME)
 
 
@@ -51,7 +51,7 @@ parser.add_argument('--test-only', type=str, default='', help="only test the spe
 
 parser.add_argument('--simulate', action='store_true', help="print out the build commands without actually building the containers")
 parser.add_argument('--push', type=str, default='', help="repo or user to push built container image to (no push by default)")
-parser.add_argument('--logs', type=str, default='', help="sets the directory to save container build logs to (default: jetson-containers/logs)")
+parser.add_argument('--logs', type=str, default='', help="sets the directory to save container build logs to (default: blueberry-jetson-containers/logs)")
 parser.add_argument('--verbose', action='store_true', help="enable verbose/debug logging")
 parser.add_argument('--no-github-api', action='store_true', help="disalbe Github API use to force rebuild on new git commits")
 

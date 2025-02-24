@@ -7,7 +7,7 @@
 #    `--env JUPYTER_PASSWORD=nvidia`
 #    `--env JUPYTER_LOGS=/data/logs/jupyter.log`
 #
-# The `/data` location is automatically mounted to your `jetson-containers/data` directory.
+# The `/data` location is automatically mounted to your `blueberry-jetson-containers/data` directory.
 
 : "${JUPYTER_ROOT:=/}"
 : "${JUPYTER_PORT:=8888}"

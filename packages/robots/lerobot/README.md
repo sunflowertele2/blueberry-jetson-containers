@@ -21,7 +21,7 @@ rerun
 Then, start the docker container to run the visualization script.
 
 ```bash
-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
+blueberry-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
   python3 lerobot/scripts/visualize_dataset.py \
     --repo-id lerobot/pusht \
     --episode-index 0
@@ -32,7 +32,7 @@ jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
 See the [original instruction on lerobot repo](https://github.com/huggingface/lerobot/?tab=readme-ov-file#evaluate-a-pretrained-policy).
 
 ```bash
-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
+blueberry-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
   python3 lerobot/scripts/eval.py \
     -p lerobot/diffusion_pusht \
     eval.n_episodes=10 \
@@ -44,7 +44,7 @@ jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
 See the [original instruction on lerobot repo](https://github.com/huggingface/lerobot/?tab=readme-ov-file#train-your-own-policy).
 
 ```bash
-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
+blueberry-jetson-containers run --shm-size=4g -w /opt/lerobot $(autotag lerobot) \
   python3 lerobot/scripts/train.py \
     policy=act \
     env=aloha \
@@ -119,10 +119,10 @@ lrwxrwxrwx 1 root root         7 Sep 24 17:20 /dev/ttyACM_kochfollower -> ttyACM
 lrwxrwxrwx 1 root root         7 Sep 24 16:13 /dev/ttyACM_kochleader -> ttyACM1
 ```
 
-### Create the local copy of lerobot on host (under `jetson-containers/data` dir)
+### Create the local copy of lerobot on host (under `blueberry-jetson-containers/data` dir)
 
 ```bash
-cd jetson-containers
+cd blueberry-jetson-containers
 ./packages/robots/lerobot/clone_lerobot_dir_under_data.sh
 ./packages/robots/lerobot/copy_overlay_files_in_data_lerobot.sh
 ```
@@ -187,27 +187,27 @@ Now follow the Jupyter notebook contents.
 <summary><b><a id="run">RUN CONTAINER</a></b></summary>
 <br>
 
-To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
+To start the container, you can use [`blueberry-jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag lerobot)
+blueberry-jetson-containers run $(autotag lerobot)
 
 # or explicitly specify one of the container images above
-jetson-containers run dustynv/lerobot:r36.4.0
+blueberry-jetson-containers run dustynv/lerobot:r36.4.0
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host dustynv/lerobot:r36.4.0
 ```
-> <sup>[`jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
+> <sup>[`blueberry-jetson-containers run`](/docs/run.md) forwards arguments to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) with some defaults added (like `--runtime nvidia`, mounts a `/data` cache, and detects devices)</sup><br>
 > <sup>[`autotag`](/docs/run.md#autotag) finds a container image that's compatible with your version of JetPack/L4T - either locally, pulled from a registry, or by building it.</sup>
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag lerobot)
+blueberry-jetson-containers run -v /path/on/host:/path/in/container $(autotag lerobot)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag lerobot) my_app --abc xyz
+blueberry-jetson-containers run $(autotag lerobot) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
@@ -217,7 +217,7 @@ You can pass any options to it that you would to [`docker run`](https://docs.doc
 
 If you use [`autotag`](/docs/run.md#autotag) as shown above, it'll ask to build the container for you if needed.  To manually build it, first do the [system setup](/docs/setup.md), then run:
 ```bash
-jetson-containers build lerobot
+blueberry-jetson-containers build lerobot
 ```
-The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/jetson_containers/build.py) for build options.
+The dependencies from above will be built into the container, and it'll be tested during.  Run it with [`--help`](/blueberry_jetson_containers/build.py) for build options.
 </details>

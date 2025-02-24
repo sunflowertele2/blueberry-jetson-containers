@@ -97,7 +97,7 @@ Got questions? You have several options to get them answered:
 #### For NVIDIA Jetson based Home Assistant Support:
 - The NVIDIA Jetson AI Lab [tutorials section](https://www.jetson-ai-lab.com/tutorial-intro.html).
 - The Jetson AI Lab - Home Assistant Integration [thread on NVIDIA's Developers Forum](https://forums.developer.nvidia.com/t/jetson-ai-lab-home-assistant-integration/288225).
-- In case you've found an bug in `jetson-containers`, please [open an issue on our GitHub](https://github.com/dusty-nv/jetson-containers/issues).
+- In case you've found an bug in `blueberry-jetson-containers`, please [open an issue on our GitHub](https://github.com/dusty-nv/blueberry-jetson-containers/issues).
 
 > [!NOTE]
 > This project was created by [Jetson AI Lab Research Group](https://www.jetson-ai-lab.com/research.html).

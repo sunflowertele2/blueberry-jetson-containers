@@ -1,6 +1,6 @@
 import os
 
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 from packaging.version import Version
 
 TRITON_CLIENTS = 'clients'

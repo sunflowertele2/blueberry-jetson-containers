@@ -30,7 +30,7 @@ RUN apt-get update && \
 # https://github.com/IntelRealSense/librealsense/issues/11931
 # ARG LIBREALSENSE_VERSION=development
 
-# https://github.com/dusty-nv/jetson-containers/issues/398
+# https://github.com/dusty-nv/blueberry-jetson-containers/issues/398
 ARG LIBREALSENSE_VERSION=master
 
 RUN git clone --branch ${LIBREALSENSE_VERSION} --depth=1 https://github.com/IntelRealSense/librealsense && \

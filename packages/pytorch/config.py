@@ -1,4 +1,4 @@
-from jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
+from blueberry_jetson_containers import L4T_VERSION, CUDA_ARCHITECTURES
 from packaging.version import Version
 
 from .version import PYTORCH_VERSION

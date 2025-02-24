@@ -1,4 +1,4 @@
-from jetson_containers import L4T_VERSION, handle_json_request, github_latest_tag
+from blueberry_jetson_containers import L4T_VERSION, handle_json_request, github_latest_tag
 from packaging.version import parse
 
 

@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 
 def oobabooga(version, branch=None, tag=None, sha=None, build_args=None, default=False):
     twu = package.copy()

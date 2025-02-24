@@ -1,5 +1,5 @@
 
-from jetson_containers import CUDA_ARCHITECTURES
+from blueberry_jetson_containers import CUDA_ARCHITECTURES
 
 package['build_args'] = {
     'CUDAARCHS': ';'.join([str(x) for x in CUDA_ARCHITECTURES]),

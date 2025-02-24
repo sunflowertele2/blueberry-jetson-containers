@@ -1,5 +1,5 @@
 
-from jetson_containers import L4T_VERSION, PYTHON_VERSION
+from blueberry_jetson_containers import L4T_VERSION, PYTHON_VERSION
 from packaging.version import Version
 
 if L4T_VERSION >= Version('36.2.0'): # JetPack 6.0

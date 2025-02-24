@@ -1,4 +1,4 @@
-from jetson_containers import handle_text_request
+from blueberry_jetson_containers import handle_text_request
 
 
 def create_package(version, branch=None, default=False) -> list:

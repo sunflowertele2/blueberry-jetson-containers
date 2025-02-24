@@ -1,4 +1,4 @@
-from jetson_containers import L4T_VERSION
+from blueberry_jetson_containers import L4T_VERSION
 import os
 
 def exllama(version, branch=None, requires=None, default=False):

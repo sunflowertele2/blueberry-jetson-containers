@@ -1,4 +1,4 @@
-from jetson_containers import CUDA_VERSION
+from blueberry_jetson_containers import CUDA_VERSION
 from packaging.version import Version
 
 def bitsandbytes(version, requires=None, default=False, branch=None, repo='bitsandbytes-foundation/bitsandbytes'):

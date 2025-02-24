@@ -1,5 +1,5 @@
 
-from jetson_containers import PYTHON_VERSION, JETPACK_VERSION
+from blueberry_jetson_containers import PYTHON_VERSION, JETPACK_VERSION
 from packaging.version import Version
 
 if JETPACK_VERSION >= Version('6.1'):

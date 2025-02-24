@@ -1,4 +1,4 @@
-from jetson_containers import CUDA_ARCHITECTURES
+from blueberry_jetson_containers import CUDA_ARCHITECTURES
 
 def deepspeed(version, branch=None, default=False, build_args=None):
     pkg = package.copy()

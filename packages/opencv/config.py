@@ -1,5 +1,5 @@
 
-from jetson_containers import CUDA_VERSION, CUDA_ARCHITECTURES
+from blueberry_jetson_containers import CUDA_VERSION, CUDA_ARCHITECTURES
 from packaging.version import Version
 
 def opencv(version, requires=None, default=False, url=None):

@@ -1,4 +1,4 @@
-from jetson_containers import L4T_VERSION, CUDA_VERSION, update_dependencies
+from blueberry_jetson_containers import L4T_VERSION, CUDA_VERSION, update_dependencies
 from packaging.version import Version
 
 def onnxruntime_genai(version, branch=None, requires=None, default=False):

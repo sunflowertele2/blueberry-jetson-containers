@@ -1,28 +1,28 @@
 name: 🐛 Bug Report
 # title: " "
-description: Problems with jetson-containers
+description: Problems with blueberry-jetson-containers
 labels: [bug, triage]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for submitting an jetson-containers 🐛 Bug Report!
+        Thank you for submitting an blueberry-jetson-containers 🐛 Bug Report!
 
   - type: checkboxes
     attributes:
       label: Search before asking
       description: >
-        Please search the jetson-containers [Jetson PlayGround](https://www.jetson-ai-lab.com/), [Jetson Forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/70) and [issues](https://github.com/dusty-nv/jetson-containers/issues) to see if a similar feature request already exists.
+        Please search the blueberry-jetson-containers [Jetson PlayGround](https://www.jetson-ai-lab.com/), [Jetson Forum](https://forums.developer.nvidia.com/c/agx-autonomous-machines/jetson-embedded-systems/70) and [issues](https://github.com/dusty-nv/blueberry-jetson-containers/issues) to see if a similar feature request already exists.
       options:
         - label: >
-            I have searched the jetson-containers [issues](https://github.com/dusty-nv/jetson-containers/issues) and found no similar feature requests.
+            I have searched the blueberry-jetson-containers [issues](https://github.com/dusty-nv/blueberry-jetson-containers/issues) and found no similar feature requests.
           required: true
 
   - type: dropdown
     attributes:
-      label: jetson-containers Component
+      label: blueberry-jetson-containers Component
       description: |
-        Please select the jetson-containers component where you found the bug.
+        Please select the blueberry-jetson-containers component where you found the bug.
       multiple: true
       options:
         - "JetPack"
@@ -62,6 +62,6 @@ body:
     attributes:
       label: Are you willing to submit a PR?
       description: >
-        (Optional) We encourage you to submit a [Pull Request](https://github.com/dusty-nv/jetson-containers/pulls) (PR) to help improve jetson-containers for everyone, especially if you have a good understanding of how to implement a fix or feature.
+        (Optional) We encourage you to submit a [Pull Request](https://github.com/dusty-nv/blueberry-jetson-containers/pulls) (PR) to help improve blueberry-jetson-containers for everyone, especially if you have a good understanding of how to implement a fix or feature.
       options:
         - label: Yes I'd like to help by submitting a PR!

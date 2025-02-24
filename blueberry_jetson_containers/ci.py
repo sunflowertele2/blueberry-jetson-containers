@@ -3,13 +3,13 @@
 # Tool for generating GitHub Action workflows and self-hosted runners.
 #
 # Setup/register self-hosted runner service:
-#   python3 -m jetson_containers.ci register --token $GITHUB_TOKEN
+#   python3 -m blueberry_jetson_containers.ci register --token $GITHUB_TOKEN
 #
 # Generate build/test workflows from packages:
-#   python3 -m jetson_containers.ci generate
+#   python3 -m blueberry_jetson_containers.ci generate
 #
 # Generate the BUILD ALL workflow:
-#   python3 -m jetson_containers.ci generate --build-all
+#   python3 -m blueberry_jetson_containers.ci generate --build-all
 #
 import os
 import re
@@ -21,7 +21,7 @@ import pprint
 import argparse
 import subprocess
 
-from jetson_containers import (find_package, find_packages, group_packages, dependant_packages,  
+from blueberry_jetson_containers import (find_package, find_packages, group_packages, dependant_packages,  
                                resolve_dependencies, L4T_VERSION, JETPACK_VERSION)
   
   
@@ -78,7 +78,7 @@ def generate_workflow(package, root, simulate=False):
     
     on_paths = [
         f".github/workflows/{workflow_name}.yml",
-        #"jetson_containers/**",
+        #"blueberry_jetson_containers/**",
         os.path.join(package['path'].replace(root+'/',''), '*'),
         f"!{os.path.join(package['path'].replace(root+'/',''), 'README.md')}",
         f"!{os.path.join(package['path'].replace(root+'/',''), 'docs.md')}",
@@ -117,7 +117,7 @@ def generate_workflow(package, root, simulate=False):
     txt += "         git config --global user.email \"dustinf@nvidia.com\" \n"
     txt += "         git config --global user.name \"Dustin Franklin\" \n"
     txt += "         git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY || echo 'repo already cloned or another error encountered' \n"
-    txt += "         cd jetson-containers \n"
+    txt += "         cd blueberry-jetson-containers \n"
     txt += "         git fetch origin \n"
     txt += "         git checkout $GITHUB_SHA \n"
     txt += "         git status \n"
@@ -161,7 +161,7 @@ def generate_workflow_build_all(packages, root, simulate=False):
         txt += "          echo \"$RUNNER_WORKSPACE\" \n"
         txt += "          cd $RUNNER_WORKSPACE \n"
         txt += "          git clone $GITHUB_SERVER_URL/$GITHUB_REPOSITORY || echo 'repo already cloned or another error encountered' \n"
-        txt += "          cd jetson-containers \n"
+        txt += "          cd blueberry-jetson-containers \n"
         txt += "          git fetch origin \n"
         txt += "          git checkout $GITHUB_SHA \n"
         txt += "          git status \n"
@@ -269,7 +269,7 @@ if __name__ == "__main__":
     parser.add_argument('--build-all', action='store_true')
     parser.add_argument('--token', type=str, default='')
     parser.add_argument('--labels', type=str, default='')
-    parser.add_argument('--repo', type=str, default='https://github.com/dusty-nv/jetson-containers')
+    parser.add_argument('--repo', type=str, default='https://github.com/dusty-nv/blueberry-jetson-containers')
     
     args = parser.parse_args()
     

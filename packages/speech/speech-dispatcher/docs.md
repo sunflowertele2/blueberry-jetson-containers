@@ -13,7 +13,7 @@ To output sound from your Docker container while using the host's sound device, 
 
 We use PulseAudio from within the container. To do this, we need share the PulseAudio socket between the host and the container.
 
-### jetson-containers `run.sh` modification
+### blueberry-jetson-containers `run.sh` modification
 
 Expand the `docker run` options for sound like this.
 
@@ -97,7 +97,7 @@ pactl set-default-sink [SINK_NAME_OR_INDEX]
 ## Step 4. Run the container
 
 ```bash
-jetson-containers run $(autotag speech-dispatcher)
+blueberry-jetson-containers run $(autotag speech-dispatcher)
 ```
 
 Once inside the container;

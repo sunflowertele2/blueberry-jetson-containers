@@ -1,4 +1,4 @@
-from jetson_containers import update_dependencies, PYTHON_VERSION
+from blueberry_jetson_containers import update_dependencies, PYTHON_VERSION
 from packaging.version import Version
 from ..ml.tensorflow.version import TENSORFLOW_VERSION
 
